@@ -1,44 +1,47 @@
 import React, { useState } from "react";
 import "../style.css";
+import classNames from "classnames";
 
 const QuestionBox = ({ question, options, selected, correct }) => {
-  const [answer, setAnswer] = useState(options);
+  const [answer, setAnswer] = useState("");
+  const [index, setIndex] = useState("");
   const [result, setResult] = useState("");
 
-  const checkResult = (text) => {
+  const determineResult = (text) => {
     if (text === correct) {
       setResult("Correct");
     } else {
       setResult("Incorrect");
     }
-    console.log("baaaaaaa", text);
   };
+
+  const bullshit = classNames({
+    hidden: answer !== "",
+    answerBtn: result === "",
+  });
+
+  const bullshit2 = classNames({
+    correctBtn: result === "Correct",
+    incorrectBtn: result === "Incorrect",
+  });
 
   return (
     <div className="questionBox">
       <div className="question">{question}</div>
       <div className="answer">
-        {answer.map((text, index) => (
+        {options.map((text, index) => (
           <button
             key={index}
-            className={
-              result === ""
-                ? "answerBtn"
-                : result === "Correct"
-                ? "correctBtn"
-                : "incorrectBtn"
-            }
+            className={index !== answer ? bullshit : bullshit2}
             onClick={() => {
-              setAnswer([text]);
+              setAnswer(index);
               selected(text);
-              checkResult(text);
-              console.log(result, "meeeem");
+              determineResult(text);
             }}
           >
             {text}
           </button>
         ))}
-
         {result === "Incorrect" ? (
           <h3 className="incorrect">{result}</h3>
         ) : (
