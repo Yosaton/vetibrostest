@@ -25,19 +25,11 @@ class QuizBee extends Component {
   }
 
   computeAnswer = (answer, correctAnswer) => {
-    // if (answer === correctAnswer) {
-    //   this.setState({ score: this.state.score + 1 });
-    // }
-
     if (answer === correctAnswer) {
       this.setState((prevState) => {
         return { score: this.state.score + 1 };
       });
     }
-
-    // this.setState({
-    //   responses: this.state.responses < 5 ? this.state.responses + 1 : 5,
-    // });
 
     this.setState((prevState) => {
       return {
