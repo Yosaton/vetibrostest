@@ -48,8 +48,15 @@ class QuizBee extends Component {
   };
 
   render() {
+    //change background based on whether game is complete or not
+    let screenChange;
+    if (this.state.responses < 5) {
+      screenChange = "container";
+    } else {
+      screenChange = "container2";
+    }
     return (
-      <div className="container">
+      <div className={screenChange}>
         <div className="title">QuizBee</div>
         {this.state.questionBank.length > 0 &&
           this.state.responses < 5 &&
@@ -65,7 +72,11 @@ class QuizBee extends Component {
             )
           )}
         {this.state.responses === 5 ? (
-          <Result score={this.state.score} playAgain={() => this.playAgain()} />
+          <Result
+            className="container-2"
+            score={this.state.score}
+            playAgain={() => this.playAgain()}
+          />
         ) : null}
       </div>
     );

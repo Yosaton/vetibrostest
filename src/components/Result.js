@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 
 const Result = ({ score, playAgain }) => {
-  var myDate = new Date();
-  var newDate = myDate.toLocaleString();
+  const myDate = new Date();
+  const newDate = myDate.toLocaleString();
 
   var localStorageScores = [];
   localStorageScores =
@@ -30,17 +30,15 @@ const Result = ({ score, playAgain }) => {
       <div className="score">You scored {score} / 5 correct answers!</div>
 
       <div className="score-2">
-        <ol>
-          {localStorageScores
-            .slice(0, 5) //only displays top 10 scores
-            .sort((a, b) => b.score - a.score) //display scores descending
-            .map((localStorageScore, index) => (
-              <li key={index}>
-                score: {localStorageScore.score} *** date:
-                {localStorageScore.newDate}
-              </li>
-            ))}
-        </ol>
+        {localStorageScores
+          .sort((a, b) => b.score - a.score) //display scores descending
+          .slice(0, 5) //only displays top 5 scores
+          .map((localStorageScore, index) => (
+            <li key={index}>
+              {index + 1}. score: {localStorageScore.score} *** date:
+              {localStorageScore.newDate}
+            </li>
+          ))}
       </div>
       <button
         className="playBtn"
