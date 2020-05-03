@@ -42,11 +42,6 @@ const QuestionBox = ({ question, options, selected, correct }) => {
             {text}
           </button>
         ))}
-        {result === "Incorrect" ? (
-          <h3 className="incorrect">{result}</h3>
-        ) : (
-          <h3 className="correct">{result}</h3>
-        )}
       </div>
     </div>
   );

@@ -1,45 +1,59 @@
-// import React, { Component } from "react";
 import React, { useEffect, useState } from "react";
 
-const Result = ({ score, playAgain }) => {
+const Result = ({ score, playAgain, chosenCharacter }) => {
   const myDate = new Date();
   const newDate = myDate.toLocaleString();
+  const chosenCharacterName = chosenCharacter.alias;
+
+  const victorySongs = [
+    "zelda.mp3",
+    "samus.mp3",
+    "mario.mp3",
+    "captain_falcon.mp3",
+    "donkey_kong.mp3",
+    "fox.mp3",
+    "kirby.mp3",
+    "ness.mp3",
+    "pikachu.mp3",
+    "yoshi.mp3",
+  ];
+
+  const victorySong =
+    victorySongs[Math.floor(Math.random() * victorySongs.length)];
 
   var localStorageScores = [];
   localStorageScores =
     JSON.parse(localStorage.getItem("myValueInLocalStorage")) || [];
-  localStorageScores.push({ score, newDate });
+  localStorageScores.push({ score, newDate, chosenCharacterName });
 
   localStorage.setItem(
     "myValueInLocalStorage",
     JSON.stringify(localStorageScores)
   );
 
-  // useEffect(() => {
-  //   localStorage.setItem("myValueInLocalStorage", JSON.stringify(score));
-  // }, [score]);
-
-  // useEffect(() => {
-  //   window.localStorage.setItem("myValueInLocalStorage", JSON.stringify(score));
-  // });
-
-  console.log(localStorageScores.length, "lengther");
-
   return (
-    <div className="score-board">
-      <div className="score">You scored {score} / 5 correct answers!</div>
+    <div>
+      <div className="score-board">
+        <audio controls autoplay="autoplay">
+          <source src={victorySong} type="audio/mpeg"></source>
+        </audio>
+        <div className="score">You scored {score} / 5 correct answers!</div>
 
-      <div className="score-2">
-        {localStorageScores
-          .sort((a, b) => b.score - a.score) //display scores descending
-          .slice(0, 5) //only displays top 5 scores
-          .map((localStorageScore, index) => (
-            <li key={index}>
-              {index + 1}. score: {localStorageScore.score} *** date:
-              {localStorageScore.newDate}
-            </li>
-          ))}
+        <div className="score-2">
+          {localStorageScores
+            .sort((a, b) => b.score - a.score) //display scores descending
+            .slice(0, 5) //only displays top 5 scores
+            .map((localStorageScore, index) => (
+              <li key={index}>
+                {index + 1}.{localStorageScore.chosenCharacterName}{" "}
+                {localStorageScore.score}{" "}
+                {localStorageScore.score === 1 ? " point" : "points"} || date:
+                {localStorageScore.newDate}
+              </li>
+            ))}
+        </div>
       </div>
+
       <button
         className="playBtn"
         onClick={() => {
@@ -48,6 +62,9 @@ const Result = ({ score, playAgain }) => {
       >
         Play Again!
       </button>
+      <div className="resultScreenCharacter">
+        <img src={chosenCharacter.pic} />
+      </div>
     </div>
   );
 };
