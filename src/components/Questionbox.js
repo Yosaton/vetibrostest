@@ -7,29 +7,29 @@ const QuestionBox = ({ question, options, selected, correct }) => {
   const [result, setResult] = useState("");
 
   const correctSounds = [
-    "hit2.wav",
-    "hit3.wav",
-    "hit4.wav",
-    "hit5.wav",
-    "hit7.wav",
-    "hit8.wav",
-    "hit10.wav",
-    "crowd5.wav",
-    "bat-strike.wav",
-    "target-hit.wav",
+    "sound_effects/hit2.wav",
+    "sound_effects/hit3.wav",
+    "sound_effects/hit4.wav",
+    "sound_effects/hit5.wav",
+    "sound_effects/hit7.wav",
+    "sound_effects/hit8.wav",
+    "sound_effects/hit10.wav",
+    "sound_effects/crowd5.wav",
+    "sound_effects/bat-strike.wav",
+    "sound_effects/target-hit.wav",
   ];
 
   const incorrectSounds = [
-    "crowd4.wav",
-    "siren.wav",
-    "shieldbreak.wav",
-    "shell-impact.wav",
-    "ricochet.wav",
-    "mush-down.wav",
-    "menu-no.wav",
-    "honk.wav",
-    "die2.wav",
-    "die1.wav",
+    "sound_effects/crowd4.wav",
+    "sound_effects/siren.wav",
+    "sound_effects/shieldbreak.wav",
+    "sound_effects/shell-impact.wav",
+    "sound_effects/ricochet.wav",
+    "sound_effects/mush-down.wav",
+    "sound_effects/menu-no.wav",
+    "sound_effects/honk.wav",
+    "sound_effects/die2.wav",
+    "sound_effects/die1.wav",
   ];
 
   const correctSound =

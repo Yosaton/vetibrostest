@@ -8,15 +8,15 @@ const BackgroundSong = ({ imgIndex }) => {
     audio.volume = 0.3;
 
     const backgroundSongs = [
-      "peach_castle.mp3",
-      "mushroom_kingdom.mp3",
-      "dream_land.mp3",
-      "kongo_jungle.mp3",
-      "saffron_city.mp3",
-      "planet_zebes.mp3",
-      "sector_z.mp3",
-      "hyrule_castle.mp3",
-      "yoshi_island.mp3",
+      "background_songs/peach_castle.mp3",
+      "background_songs/mushroom_kingdom.mp3",
+      "background_songs/dream_land.mp3",
+      "background_songs/kongo_jungle.mp3",
+      "background_songs/saffron_city.mp3",
+      "background_songs/planet_zebes.mp3",
+      "background_songs/sector_z.mp3",
+      "background_songs/hyrule_castle.mp3",
+      "background_songs/yoshi_island.mp3",
     ];
 
     const backgroundSong = backgroundSongs[imgIndex];

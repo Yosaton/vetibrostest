@@ -21,7 +21,7 @@ const TitleScreen = ({ selectedCharacter, changeBackground }) => {
   return (
     <div className="container-character-selection">
       <audio controls autoPlay="autoPlay">
-        <source src="smashbros.mp3" type="audio/mpeg"></source>
+        <source src="background_songs/smashbros.mp3" type="audio/mpeg"></source>
       </audio>
       <div className="choose-character-title">Choose your character</div>
       <div className="characterBoxes">
@@ -36,7 +36,7 @@ const TitleScreen = ({ selectedCharacter, changeBackground }) => {
         >
           Maw
           <br />
-          <img src={maw} />
+          <img src={maw} alt="maw" />
         </div>
         <div
           onClick={() => {
@@ -48,7 +48,7 @@ const TitleScreen = ({ selectedCharacter, changeBackground }) => {
           className="characterBox"
         >
           Isara
-          <img src={isara} />
+          <img src={isara} alt="isara" />
         </div>
         <div
           onClick={() => {
@@ -60,7 +60,7 @@ const TitleScreen = ({ selectedCharacter, changeBackground }) => {
           className="characterBox"
         >
           Skeeter
-          <img src={skeeter} />
+          <img src={skeeter} alt="skeeter" />
         </div>
         <div
           onClick={() => {
@@ -72,7 +72,7 @@ const TitleScreen = ({ selectedCharacter, changeBackground }) => {
           className="characterBox"
         >
           Sharon
-          <img src={sharon} />
+          <img src={sharon} alt="sharon" />
         </div>
         <div
           onClick={() => {
@@ -84,7 +84,7 @@ const TitleScreen = ({ selectedCharacter, changeBackground }) => {
           className="characterBox"
         >
           Aaron
-          <img src={aaron} />
+          <img src={aaron} alt="aaron" />
         </div>
       </div>
       <div className="selectedCharacterBox">
@@ -101,6 +101,7 @@ const TitleScreen = ({ selectedCharacter, changeBackground }) => {
               ? character.pic
               : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           }
+          alt="selected character"
         ></img>
         <h3>{character.alias}</h3>
       </div>

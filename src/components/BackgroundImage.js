@@ -5,15 +5,15 @@ const BackgroundImage = ({ imgIndexProp }) => {
 
   useEffect(() => {
     const backgroundImgs = [
-      "./mario.jpg",
-      "./mario2.png",
-      "./kirby.jpg",
-      "./donkey_kong.jpg",
-      "./pokemon.jpeg",
-      "./samus.png",
-      "./starfox.jpg",
-      "./zelda.png",
-      "./yoshi.png",
+      "background_images/mario.jpg",
+      "background_images/mario2.png",
+      "background_images/kirby.jpg",
+      "background_images/donkey_kong.jpg",
+      "background_images/pokemon.jpeg",
+      "background_images/samus.png",
+      "background_images/starfox.jpg",
+      "background_images/zelda.png",
+      "background_images/yoshi.png",
     ];
 
     const backgroundImg =

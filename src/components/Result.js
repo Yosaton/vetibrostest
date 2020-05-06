@@ -6,16 +6,16 @@ const Result = ({ score, playAgain, chosenCharacter }) => {
   const chosenCharacterName = chosenCharacter.alias;
 
   const victorySongs = [
-    "zelda.mp3",
-    "samus.mp3",
-    "mario.mp3",
-    "captain_falcon.mp3",
-    "donkey_kong.mp3",
-    "fox.mp3",
-    "kirby.mp3",
-    "ness.mp3",
-    "pikachu.mp3",
-    "yoshi.mp3",
+    "victory_tunes/zelda.mp3",
+    "victory_tunes/samus.mp3",
+    "victory_tunes/mario.mp3",
+    "victory_tunes/captain_falcon.mp3",
+    "victory_tunes/donkey_kong.mp3",
+    "victory_tunes/fox.mp3",
+    "victory_tunes/kirby.mp3",
+    "victory_tunes/ness.mp3",
+    "victory_tunes/pikachu.mp3",
+    "victory_tunes/yoshi.mp3",
   ];
 
   const victorySong =
@@ -63,7 +63,7 @@ const Result = ({ score, playAgain, chosenCharacter }) => {
         Play Again!
       </button>
       <div className="resultScreenCharacter">
-        <img src={chosenCharacter.pic} />
+        <img src={chosenCharacter.pic} alt="chosen character" />
       </div>
     </div>
   );
