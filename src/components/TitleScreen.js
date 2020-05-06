@@ -1,30 +1,7 @@
 import React, { useState } from "react";
-import "../style.css";
-import classNames from "classnames";
-import soundFile from "../audio/smashbros.mp3";
-import { Howl, Howler } from "howler";
 
 const TitleScreen = ({ selectedCharacter, changeBackground }) => {
   const [character, setCharacter] = useState("");
-  const [index, setIndex] = useState("");
-  const [result, setResult] = useState("");
-
-  // Howler.volume(0.2);
-
-  // var sound = new Howl({
-  //   src: ["../smashbros.mp3"],
-  //   autoplay: true,
-  //   volume: 0.5,
-  // });
-
-  // var sound = new Howl({
-  //   //needs mp3 in src + pub folder to work
-  //   autoplay: true,
-  //   html5: true,
-  //   src: ["smashbros.mp3"],
-  // });
-
-  // sound.autoplay();
 
   const maw =
     "http://www.avatarsinpixels.com/chibi/eyJIYWlyTG93ZXIiOiIzIiwiU29ja3MiOiIxIiwiUGFudHMiOiIxMCIsIlRvcCI6IjE5IiwiRXllYnJvd3MiOiIxIiwiRXllcyI6IjExIiwiTW91dGgiOiIxNiIsIkhhaXJUb3AiOiI1Iiwic2tpblRvbmUiOiJmOGQyYjkiLCJoYWlyVG9uZSI6ImNmMjUyNSIsImV5ZXNUb25lIjoiOWI1NDI1IiwicGFudHNUb25lIjoiYjAzMWJhIiwidG9wVG9uZSI6Ijg3MDBlZiJ9/1/show.png";
@@ -43,7 +20,7 @@ const TitleScreen = ({ selectedCharacter, changeBackground }) => {
 
   return (
     <div className="container-character-selection">
-      <audio controls autoPlay="autoplay">
+      <audio controls autoPlay="autoPlay">
         <source src="smashbros.mp3" type="audio/mpeg"></source>
       </audio>
       <div className="choose-character-title">Choose your character</div>

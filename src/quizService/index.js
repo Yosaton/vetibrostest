@@ -15,7 +15,7 @@ const qBank = {
     {
       question: "What role did Bob serve during the Vietnam War?",
       answers: ["Infantry", "Artillery", "Airforce", "Surveillance"],
-      correct: "Jack",
+      correct: "Artillery",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -27,6 +27,13 @@ const qBank = {
     {
       question: "Which of the following was not a sister of Dewey C's?",
       answers: ["Reba", "Mabel", "Caroline", "Dorothy"],
+      correct: "Reba",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question:
+        "Which of Lucy June's sisters married a younger man named Z.O. after separating from her former husband, Nolan?",
+      answers: ["Reba", "Pauline", "Catherine", "Patsy"],
       correct: "Reba",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
@@ -44,12 +51,6 @@ const qBank = {
     },
     {
       question: "When was Dewey C's birthday?",
-      answers: ["September 21st", "October 5th", "March 21st", "August 28th"],
-      correct: "September 21st",
-      questionId: Math.floor(100000 + Math.random() * 900000),
-    },
-    {
-      question: "When was grandpa's birthday?",
       answers: ["September 21st", "October 5th", "March 21st", "August 28th"],
       correct: "September 21st",
       questionId: Math.floor(100000 + Math.random() * 900000),
@@ -124,7 +125,7 @@ const qBank = {
     {
       question: "What is Sonia (Bonnie)'s husband's name?",
       answers: ["Elijah", "Will", "Lucas", "Raymond"],
-      correct: "Asthma",
+      correct: "Raymond",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -157,7 +158,7 @@ const qBank = {
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
-      question: "What sport did Isara do during highschool?",
+      question: "What sport was Isara involved in during highschool?",
       answers: ["Rock Climbing", "Soccer", "Wrestling", "Golf"],
       correct: "Taekwondo",
       questionId: Math.floor(100000 + Math.random() * 900000),
@@ -196,6 +197,12 @@ const qBank = {
       correct: "1977 Pontiac Boneville",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
+    {
+      question: "What did Sketer major in at UT?",
+      answers: ["Sociology", "History", "Art", "Business Management"],
+      correct: "History",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
   ],
   Maw: [
     {
@@ -212,6 +219,36 @@ const qBank = {
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
+      question: "What is Valuxsa's current last name?",
+      answers: ["Scott", "Pacitti", "Carrier", "Lee"],
+      correct: "Scott",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question: "What is Billy's (ex-next door neighbor) last name?",
+      answers: ["DuValle", "Painter", "Johnson", "Barr"],
+      correct: "Painter",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question: "What road did Rhonda live on as a kid?",
+      answers: ["Barnes", "Harding", "Sadler", "Paragon Mills"],
+      correct: "Hermon",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question: "What was Kim's (Tawan's ex)'s dog's name?",
+      answers: ["Roxy", "Kali", "Mimi", "Kiki"],
+      correct: "History",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question: "What was Steve's (carpenter man)'s dog's name?",
+      answers: ["Blue", "Bo", "Bandit", "Buster"],
+      correct: "Blue",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
       question: "What is Yo's favorite food?",
       answers: ["Cheeseburger", "Steak", "Sashimi", "Pad Thai"],
       correct: "Sashimi",
@@ -219,7 +256,7 @@ const qBank = {
     },
     {
       question: "What is Skeeter's favorite food?",
-      answers: ["Tacos", "Okra", "Medium rare steak", "Pad Thai"],
+      answers: ["Tacos", "Okra", "Cheeseburger", "Pad Thai"],
       correct: "Tacos",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
@@ -232,7 +269,7 @@ const qBank = {
     {
       question: "What city in China did Yo live in for 1 year?",
       answers: ["Shanghai", "Guangzhou", "Beijing", "Hangzhou"],
-      correct: "Mrs.Orr",
+      correct: "Hangzhou",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -262,7 +299,7 @@ const qBank = {
     {
       question: "What is Jimbob's wife's name?",
       answers: ["Jimbob", "Danielle", "Abby", "Chloe"],
-      correct: "Hermon",
+      correct: "Danielle",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -312,7 +349,7 @@ const qBank = {
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
-      question: "What's Daniel's (Steve's brother) son's name?",
+      question: "What's Daniel's (Steve's brother)'s son's name?",
       answers: ["Cameron", "Dillon", "Nathan", "Brock"],
       correct: "Cameron",
       questionId: Math.floor(100000 + Math.random() * 900000),
@@ -332,7 +369,7 @@ const qBank = {
     },
     {
       question: "What's Steve's girlfriend's name?",
-      answers: ["Ashley", "Morgan", "Emma", "Laura"],
+      answers: ["Ashley", "Morgan", "Emma", "Wesley"],
       correct: "Morgan",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
@@ -373,9 +410,15 @@ const qBank = {
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
-      question: "What's Daniel's (Steve's brother) son's name?",
-      answers: ["Cameron", "Dillon", "Nathan", "Brock"],
-      correct: "Cameron",
+      question:
+        "What kind of food did Thomas Bobbit slam on the table because it wasn't tasty?",
+      answers: [
+        "Salmon patty",
+        "Hamburger patty",
+        "Pork burger patty",
+        "Sausage patty",
+      ],
+      correct: "Salmon patty",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -410,9 +453,40 @@ const qBank = {
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
+      question: "What is Rhonda's maiden name?",
+      answers: ["Suthers", "Rousey", "Underwood", "Gilmore"],
+      correct: "Underwood",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question: "What is Valuxsa's current last name?",
+      answers: ["Scott", "Pacitti", "Carrier", "Lee"],
+      correct: "Scott",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question:
+        "Which of Lucy June's sisters married a younger man named Z.O. after separating from her former husband, Nolan?",
+      answers: ["Reba", "Pauline", "Catherine", "Patsy"],
+      correct: "Reba",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question: "What is Billy's (ex-next door neighbor) last name?",
+      answers: ["DuValle", "Painter", "Johnson", "Barr"],
+      correct: "Painter",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question: "What is dad's birthday?",
+      answers: ["September 9th", "September 2nd", "October 9th", "October 2nd"],
+      correct: "September 2nd",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
       question: "What role did Bob serve during the Vietnam War?",
       answers: ["Infantry", "Artillery", "Airforce", "Surveillance"],
-      correct: "Jack",
+      correct: "Artillery",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -471,7 +545,7 @@ const qBank = {
     {
       question: "Which of the following was not a brother of Dewey C's?",
       answers: ["Wesley", "Don", "Cooter", "Howard"],
-      correct: "Jack",
+      correct: "Cooter",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -648,7 +722,7 @@ const qBank = {
     {
       question: "What is Sonia (Bonnie)'s husband's name?",
       answers: ["Elijah", "Will", "Lucas", "Raymond"],
-      correct: "Asthma",
+      correct: "Raymond",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -672,9 +746,53 @@ const qBank = {
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
+      question:
+        "What object did dad beat Isara with for not letting Yo play Nintendo?",
+      answers: ["Belt", "Chain of Pain", "Pooper Scooper", "Nunchucks"],
+      correct: "Pooper Scooper",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question:
+        "Which of Lucy June's sisters married a younger man named Z.O. after separating from her former husband, Nolan?",
+      answers: ["Reba", "Pauline", "Catherine", "Patsy"],
+      correct: "Reba",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question: "Isara wanted to give what name to Yo when he was first born?",
+      answers: ["Kain", "Cecil", "Lock", "Seth"],
+      correct: "Kain",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question: "What sport was Isara involved in during highschool?",
+      answers: ["Rock Climbing", "Soccer", "Wrestling", "Golf"],
+      correct: "Wrestling",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question: "What is Valuxsa's current last name?",
+      answers: ["Scott", "Pacitti", "Carrier", "Lee"],
+      correct: "Scott",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question: "What is Billy's (ex-next door neighbor) last name?",
+      answers: ["DuValle", "Painter", "Johnson", "Barr"],
+      correct: "Painter",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question: "What is Rhonda's maiden name?",
+      answers: ["Suthers", "Rousey", "Underwood", "Gilmore"],
+      correct: "Underwood",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
       question: "What role did Bob serve during the Vietnam War?",
       answers: ["Infantry", "Artillery", "Airforce", "Surveillance"],
-      correct: "Jack",
+      correct: "Artillery",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -749,7 +867,7 @@ const qBank = {
     {
       question: "What is Sonia (Bonnie)'s husband's name?",
       answers: ["Elijah", "Will", "Lucas", "Raymond"],
-      correct: "Asthma",
+      correct: "Raymond",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -780,7 +898,7 @@ const qBank = {
     {
       question: "Which of the following was not a brother of Dewey C's?",
       answers: ["Wesley", "Don", "Cooter", "Howard"],
-      correct: "Jack",
+      correct: "Cooter",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -845,7 +963,7 @@ const qBank = {
     {
       question: "How to say delicious in Thai?",
       answers: ["Law", "Mak", "Suay", "Arroy"],
-      correct: "HTC",
+      correct: "Arroy",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -863,19 +981,11 @@ const qBank = {
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
-      question:
-        "What was the name of Yo's Japanese friend in Thailand who we partied with and hung out with?",
-      answers: ["Kosuke", "Taku", "Hiro", "Makoto"],
-      correct: "Makoto",
-      questionId: Math.floor(100000 + Math.random() * 900000),
-    },
-    {
       question: "What's the name of Aaron's current girlfriend?",
       answers: ["Lucy", "Rubi", "Maria", "Carmen"],
       correct: "Lucy",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
-
     {
       question: "What is Susan's last name?",
       answers: ["Vaughn", "Woods", "Sandy", "Makoto"],
@@ -890,7 +1000,7 @@ const qBank = {
     },
     {
       question: "What is dad's nickname?",
-      answers: ["Dorothy", "Barbara", "Danielle", "Sia"],
+      answers: ["Pi", "Moo", "Lek", "Sia"],
       correct: "Sia",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
@@ -898,7 +1008,7 @@ const qBank = {
       question:
         "How many siblings did dad originally have total (including himself)?",
       answers: ["5", "7", "4", "6"],
-      correct: "Danielle",
+      correct: "7",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -939,7 +1049,7 @@ const qBank = {
     {
       question: "What role did Bob serve during the Vietnam War?",
       answers: ["Infantry", "Artillery", "Airforce", "Surveillance"],
-      correct: "Jack",
+      correct: "Artillery",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -951,6 +1061,13 @@ const qBank = {
         "1969 GTO",
       ],
       correct: "1969 Chevy Camaro",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
+      question:
+        "Which of Lucy June's sisters married a younger man named Z.O. after separating from her former husband, Nolan?",
+      answers: ["Reba", "Pauline", "Catherine", "Patsy"],
+      correct: "Reba",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -990,7 +1107,7 @@ const qBank = {
     {
       question: "What is Sonia (Bonnie)'s husband's name?",
       answers: ["Elijah", "Will", "Lucas", "Raymond"],
-      correct: "Asthma",
+      correct: "Raymond",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -1008,7 +1125,7 @@ const qBank = {
     {
       question: "Which of the following was not a brother of Dewey C's?",
       answers: ["Wesley", "Don", "Cooter", "Howard"],
-      correct: "Jack",
+      correct: "Cooter",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
@@ -1072,7 +1189,7 @@ const qBank = {
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
-      question: "What is Lucy's last name?",
+      question: "What is Lucy (Aaron's girlfriend)'s last name?",
       answers: ["Hernandez", "Brown", "Martinez", "Brandon"],
       correct: "Brandon",
       questionId: Math.floor(100000 + Math.random() * 900000),
@@ -1157,21 +1274,21 @@ const qBank = {
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
+      question: "What did Sketer major in at UT?",
+      answers: ["Sociology", "History", "Art", "Business Management"],
+      correct: "History",
+      questionId: Math.floor(100000 + Math.random() * 900000),
+    },
+    {
       question: "What was the name of the mouse at Tony's place in Memphis?",
       answers: ["Varmit", "Jerry", "Hermon", "Stewart"],
-      correct: "Philosophy",
+      correct: "Hermon",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
       question: "Who was Beverly's first boyfriend?",
       answers: ["Sunny", "Boton", "Jerry", "Stan"],
       correct: "Sunny",
-      questionId: Math.floor(100000 + Math.random() * 900000),
-    },
-    {
-      question: "Who was Beverly's first boyfriend?",
-      answers: ["Sunny", "Boton", "Jerry", "Stan"],
-      correct: "Philosophy",
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {

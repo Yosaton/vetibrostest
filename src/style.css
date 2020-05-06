@@ -22,22 +22,6 @@ html {
   background-size: cover;
 }
 
-.container-nazi {
-  position: relative;
-  width: 1024px;
-  height: 800px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 10px;
-  box-sizing: border-box;
-  margin: auto;
-  object-fit: cover;
-  background-image: url(donkey_kong.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .container-character-selection {
   width: 900px;
   height: 650px;
@@ -196,20 +180,6 @@ html {
 
 /************************************************** scoreboard start **********************************************************************/
 
-.container2 {
-  position: relative;
-  width: 1024px;
-  height: 800px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 10px;
-  box-sizing: border-box;
-  margin: auto;
-  object-fit: cover;
-  background-image: url("street-figher.jpg");
-}
-
 .score-board {
   position: relative;
 }
@@ -351,14 +321,6 @@ ol {
 
   /************************************************** scoreboard start **********************************************************************/
 
-  .container2 {
-    background: url("street-figher.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 1900px;
-  }
   .score {
     font-size: 5em;
   }
@@ -378,7 +340,7 @@ ol {
   .container {
     position: relative;
     width: 1024px;
-    height: 800px;
+    height: 1800px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;

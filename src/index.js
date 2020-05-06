@@ -1,21 +1,21 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import ReactDOM from "react-dom";
 import "./style.css";
 import quizService from "./quizService";
 import QuestionBox from "./components/Questionbox";
 import TitleScreen from "./components/TitleScreen";
-
 import Result from "./components/Result";
 import BackgroundImage from "./components/BackgroundImage";
+import BackgroundSong from "./components/BackgroundSong";
 
-class QuizBee extends Component {
+class QuizBee extends PureComponent {
   state = {
     questionBank: [],
     score: 0,
     responses: 0,
     titleScreen: true,
     characterChosen: "",
-    booty: "",
+    imgIndex: "",
   };
 
   getQuestions = (chosenCharacter) => {
@@ -41,63 +41,49 @@ class QuizBee extends Component {
     });
   };
 
-  changeBackground = (background) => {
+  isTitleScreen = (background) => {
     this.setState({
       titleScreen: false,
     });
   };
 
-  playAgain = () => {
+  handleBackground = (background) => {
     this.setState({
-      titleScreen: true,
+      imgIndex: background,
     });
+  };
+
+  playAgain = () => {
     this.setState({
       score: 0,
       responses: 0,
+      questionBank: [],
+      titleScreen: true,
     });
+    document.getElementsByClassName("container")[0].style.backgroundImage =
+      "url('')";
   };
-
-  fuckTheBackgroundHard = (selectedImage) => {
-    //the problem is that the selectedImage is not getting set to the booty
-    if ((this.state.bgImg = "")) {
-      this.setState({
-        booty: "shithole",
-      });
-    }
-    console.log(this.state.booty, "fuck ur mom riht in the mouth");
-  };
-
-  componentDidMount() {
-    let screenChange;
-
-    if (this.state.titleScreen === true) {
-      screenChange = "container";
-    } else if (this.state.titleScreen === false && this.state.responses === 5) {
-      screenChange = "container2";
-    } else if (this.state.titleScreen === false) {
-    }
-  }
 
   render() {
     return (
       <div className="container">
-        <BackgroundImage
-          selectImage={(selectedImage) =>
-            this.fuckTheBackgroundHard(selectedImage)
-          }
-        />
-        {console.log(this.state.booty, "donky")}
-        {/* {this.state.bgImg ? <div className="container" style={{ backgroundImage: "url(" + bgImg + ")" }}> : <div>} */}
+        {this.state.titleScreen === false ? (
+          <BackgroundImage
+            imgIndexProp={(imgIndexProp) => this.handleBackground(imgIndexProp)}
+          />
+        ) : null}
         <div className="title">Super Smash VetiBros</div>
         {this.state.titleScreen === true ? (
           <TitleScreen
             selectedCharacter={(chosenCharacter) =>
               this.getQuestions(chosenCharacter)
             }
-            changeBackground={(background) => this.changeBackground(background)}
+            changeBackground={(background) => this.isTitleScreen(background)}
           />
-        ) : (
-          this.state.questionBank.length === 5 &&
+        ) : this.state.questionBank.length === 5 && this.state.responses < 5 ? (
+          <BackgroundSong imgIndex={this.state.imgIndex} />
+        ) : null}
+        {this.state.questionBank.length === 5 &&
           this.state.responses < 5 &&
           this.state.questionBank.map(
             ({ question, answers, correct, questionId }) => (
@@ -109,17 +95,15 @@ class QuizBee extends Component {
                 selected={(answer) => this.computeAnswer(answer, correct)}
               />
             )
-          )
-        )}
+          )}
+
         {this.state.responses === 5 ? (
           <Result
-            className="container-2"
             score={this.state.score}
             playAgain={() => this.playAgain()}
             chosenCharacter={this.state.characterChosen}
           />
         ) : null}
-        {/* </div> */}
       </div>
     );
   }

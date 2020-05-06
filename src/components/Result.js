@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const Result = ({ score, playAgain, chosenCharacter }) => {
   const myDate = new Date();
@@ -34,7 +34,7 @@ const Result = ({ score, playAgain, chosenCharacter }) => {
   return (
     <div>
       <div className="score-board">
-        <audio controls autoplay="autoplay">
+        <audio controls autoPlay="autoPlay">
           <source src={victorySong} type="audio/mpeg"></source>
         </audio>
         <div className="score">You scored {score} / 5 correct answers!</div>

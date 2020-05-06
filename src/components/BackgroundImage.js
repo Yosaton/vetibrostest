@@ -1,25 +1,34 @@
-import React, { useState } from "react";
-import "../style.css";
-import classNames from "classnames";
+import React, { useEffect, useState } from "react";
 
-const BackgroundImage = ({ selectImage }) => {
+const BackgroundImage = ({ imgIndexProp }) => {
   const [bgImg, setbgImg] = useState("");
 
-  const backgroundImgs = [
-    "./1.jpg",
-    "./2.jpg",
-    "./granite.jpg",
-    "./donkey_kong.jpg",
-  ];
-  const backgroundImg =
-    backgroundImgs[Math.floor(Math.random() * backgroundImgs.length)];
-  // console.log(backgroundImg, "ifi tdoesnt works");
+  useEffect(() => {
+    const backgroundImgs = [
+      "./mario.jpg",
+      "./mario2.png",
+      "./kirby.jpg",
+      "./donkey_kong.jpg",
+      "./pokemon.jpeg",
+      "./samus.png",
+      "./starfox.jpg",
+      "./zelda.png",
+      "./yoshi.png",
+    ];
 
-  if (bgImg === "") {
-    selectImage(backgroundImg);
-  }
+    const backgroundImg =
+      backgroundImgs[Math.floor(Math.random() * backgroundImgs.length)];
 
-  return <div className="questionBox"> shutup</div>;
+    if (bgImg === "") {
+      setbgImg(backgroundImg);
+      imgIndexProp(backgroundImgs.indexOf(backgroundImg));
+    }
+
+    document.getElementsByClassName("container")[0].style.backgroundImage =
+      "url('" + bgImg + "')";
+  }, [bgImg]);
+
+  return null;
 };
 
 export default BackgroundImage;
