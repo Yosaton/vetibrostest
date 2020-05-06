@@ -1292,7 +1292,7 @@ const qBank = {
       questionId: Math.floor(100000 + Math.random() * 900000),
     },
     {
-      question: "Who was Ronnie's firsst girlfriend?",
+      question: "Who was Ronnie's first girlfriend?",
       answers: ["Debbie", "Sandy", "Donna", "Sherry"],
       correct: "Sandy",
       questionId: Math.floor(100000 + Math.random() * 900000),
