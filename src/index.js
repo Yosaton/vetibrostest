@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./style.css";
 import quizService from "./quizService";
@@ -8,7 +8,7 @@ import Result from "./components/Result";
 import BackgroundImage from "./components/BackgroundImage";
 import BackgroundSong from "./components/BackgroundSong";
 
-class QuizBee extends PureComponent {
+class QuizBee extends Component {
   state = {
     questionBank: [],
     score: 0,
