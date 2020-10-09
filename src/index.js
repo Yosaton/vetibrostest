@@ -66,6 +66,7 @@ class QuizBee extends Component {
 
   render() {
     return (
+
       <div className="container">
         {this.state.titleScreen === false ? (
           <BackgroundImage
